@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course</title>
+</head>
+<body>
+    <h1>WELCOME TO KPM BERANANG</h1>
+    <strong>SEARCH COURSE</strong>
+    <form action="search_course" method="get">
+        enter course: <input type="text" name="c_code">
+        <input type="submit" value="SEARCH">
+
+    </form>
+
+    <p>
+        {% for value in data %}
+            code: {{value.code}} <br><br>
+            description: {{value.desc}} <br><br>
+        {% endfor %}
+    </p>
+    <br><br>
+    <a href="{% url 'index' %">HOME</a>
+</body>
+</html>
